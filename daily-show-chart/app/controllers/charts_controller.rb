@@ -18,7 +18,7 @@ class ChartsController < ApplicationController
     the_data = []
 
     @grouped_appearance.each do |year, records|
-      the_data.push([year, records.count])
+      the_data.push([year.to_s, records.count])
     end
 
     render json: the_data

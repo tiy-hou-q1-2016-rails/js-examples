@@ -1,8 +1,8 @@
 $(window).ready(function(){
 
-  $("#group").on("change", function(event){
+  $("#group").on("change", function(){
 
-    var newChoice = event.target.value;
+    var newChoice = $("#group").val();
     $("#selected").html(newChoice);
     fetchData();
   })
@@ -15,7 +15,7 @@ $(window).ready(function(){
     $.getJSON("/charts/data.json?group=" + categoryChoice).done( function(json){
 
       var data = new google.visualization.DataTable();
-      data.addColumn('number', 'X');
+      data.addColumn('string', 'X');
       data.addColumn('number', 'Guests');
 
       data.addRows(json);
