@@ -1,0 +1,13 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<select id="group" name="">
+  <option value="">Select a Group</option>
+
+  <% @groups.each do |group| %>
+    <option value="<%= group %>"><%= group %></option>
+  <% end %>
+</select>
+
+<h1 id="selected"></h1>
+
+<div id="chart_div"></div>
