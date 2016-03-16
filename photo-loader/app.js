@@ -20,7 +20,7 @@ $(window).ready(function(){
       type: "POST",
       url: "http://jsonplaceholder.typicode.com/photos/",
       dataType: 'json',
-      data: JSON.stringify(jsonObject)
+      data: jsonObject
     })
     .done(function(json){
       console.log(json)
